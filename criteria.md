@@ -60,7 +60,7 @@ in at least 4 of 5 tries.
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
      Was there a clean gap, or did the two groups overlap? -->
 
----
+## From the distance test, there was a clean gap between the two groups.
 
 ## 4. Something about your chunks
 
@@ -86,7 +86,7 @@ Does the overlap between consecutive chunks match the configured overlap size of
 
 **Why this target:**
 
----
+## Overlap size should be 10-20% of chunk size for general text.
 
 <!-- ─────────────────────────────────────────────────────────────────────────
      UNIT 2 — read this before you change anything above.

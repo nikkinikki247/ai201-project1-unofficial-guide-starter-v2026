@@ -27,10 +27,14 @@
 
      Milestone 5. -->
 
+     I picked the campus life corpus. My system answers specific questions related to common topics like dining, housing, and transportation. In addition, the system can answer questions about these specific courses: Stat 150, Phys 130, Engl 205, Hist 118, Econ 101, CS 210, CS 340, and Biol 160.
+
 ## Chunking Strategy
 
-**Chunk size: 600**
-**Overlap: 100**
+**Chunk size:**
+600
+**Overlap:**
+100
 
 <!-- What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
@@ -144,14 +148,11 @@ I took the averages for each group and calculated the middle number.
 | What do students say about the workload for STAT 150 Applied Statistics?    | Y          | 0.301         |
 | When does the campus shuttle run?                                           | Y          | 0.402         |
 | What do students say about the format of ENGL 205 Writing for the Sciences? | Y          | 0.377         |
-
----
-
-| What is the capital of Mongolia? | N | 0.825 |
-| How do I change the oil in a diesel engine? | N | 0.934|
-| Who won the 1994 World Cup? | N | 0.886 |
-| What is the recommended dosage of ibuprofen for a headache? | N | 0.844 |
-| How do I write a for loop in Rust? | N | 0.896 |
+| What is the capital of Mongolia?                                            | N          | 0.825         |
+| How do I change the oil in a diesel engine?                                 | N          | 0.934         |
+| Who won the 1994 World Cup?                                                 | N          | 0.886         |
+| What is the recommended dosage of ibuprofen for a headache?                 | N          | 0.844         |
+| How do I write a for loop in Rust?                                          | N          | 0.896         |
 
 ## How I Used AI
 
@@ -166,8 +167,8 @@ I took the averages for each group and calculated the middle number.
 
 **1.**
 
-**2.**
-
+1. I asked Github Copilot to help me come up with two more test questions. It gave me a few example questions I could use. I changed a question that it gave related to chunking size. I changed the value ranges to match the corpora I chose.
+**2.** 2. I used Gemini to understand more about picking chunk sizes and writing the function. I got back information that told me different contexts and what chunk strategies correlated with them.
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
      claims earns nothing.
