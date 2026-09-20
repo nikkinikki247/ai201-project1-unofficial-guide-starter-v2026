@@ -29,8 +29,8 @@
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size: 600**
+**Overlap: 100**
 
 <!-- What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
@@ -41,6 +41,8 @@
      more than pretending you got it right first time.
 
      Milestone 3. -->
+
+The documents processed were shorter than 800 characters, which allowed each document's text to qualify as a single chunk. To optimize the chunking process, a chunk size slightly greater than the character count of each document was selected. This approach ensures that all relevant information is captured without exceeding the character limit.
 
 ## Sample Chunks
 
@@ -112,14 +114,19 @@ Laundry costs $1.50 wash, $1.25 dry, coin or card. On noise: loud until about 1a
      visible. Milestone 4. -->
 
 **Question:**
-
+What is the deadline to add a course?
 **Answer:**
 
 ```
+You can add a course through the end of the second week (admin_add_drop_deadline.txt).
 
+Sources retrieved: admin_add_drop_deadline.txt, admin_pass_fail_option.txt, advising_registration.txt
 ```
 
 **My relevance cutoff:**
+0.61
+
+I took the averages for each group and calculated the middle number.
 
 <!-- The number you set in config.py, and how you got there.
 
@@ -130,9 +137,21 @@ Laundry costs $1.50 wash, $1.25 dry, coin or card. On noise: loud until about 1a
 
      Milestone 4. -->
 
-| Question | In corpus? | Best distance |
-| -------- | ---------- | ------------- |
-|          |            |               |
+| Question                                                                    | In corpus? | Best distance |
+| --------------------------------------------------------------------------- | ---------- | ------------- |
+| What is the deadline to add a course?                                       | Y          | 0.329         |
+| What times is the Ridgeway Café open?                                       | Y          | 0.331         |
+| What do students say about the workload for STAT 150 Applied Statistics?    | Y          | 0.301         |
+| When does the campus shuttle run?                                           | Y          | 0.402         |
+| What do students say about the format of ENGL 205 Writing for the Sciences? | Y          | 0.377         |
+
+---
+
+| What is the capital of Mongolia? | N | 0.825 |
+| How do I change the oil in a diesel engine? | N | 0.934|
+| Who won the 1994 World Cup? | N | 0.886 |
+| What is the recommended dosage of ibuprofen for a headache? | N | 0.844 |
+| How do I write a for loop in Rust? | N | 0.896 |
 
 ## How I Used AI
 
@@ -272,5 +291,3 @@ Laundry costs $1.50 wash, $1.25 dry, coin or card. On noise: loud until about 1a
      differently, and why?
 
      Milestone 5. -->
-
-#DELETE (TEST OF FIRST COMMIT)
