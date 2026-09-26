@@ -196,15 +196,56 @@ I took the averages for each group and calculated the middle number.
 
 | Criterion                              | Target | Run 1 | Run 2 | Run 3 | Verdict |
 | -------------------------------------- | ------ | ----- | ----- | ----- | ------- |
-| 1. Retrieved chunk contains the answer | 4 of 5 |       |       |       |         |
-| 2. Every answer names a source         | 5 of 5 |       |       |       |         |
-| 3. Gate stops out-of-corpus questions  | 4 of 5 |       |       |       |         |
-| 4.                                     |        |       |       |       |         |
-| 5.                                     |        |       |       |       |         |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 5/5   | 5/5   | 5/5   | MET     |
+| 2. Every answer names a source         | 5 of 5 | 4/5   | 2/5   | 2/5   | MISSED  |
+| 3. Gate stops out-of-corpus questions  | 4 of 5 | 5/5   | 5/5   | 5/5   | MET     |
+| 4. Chunk size is >= 50 and <= 600      | 5 of 5 | 5/5   | 5/5   | 5/5   | MET     |
+| 5. Overlap size is 100                 | 5 of 5 | 5/5   | 5/5   | 5/5   | MET     |
 
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
      Name the file and function that produced it. -->
+
+Produced by: `run_eval.py::main`
+Retrieval: `store.py::search`, chunks from `chunker.py::split_documents`
+
+1. What is the deadline to add a course?
+
+```
+You can add a course through the end of the second week (admin_add_drop_deadline.txt).
+```
+
+2. What times is the Ridgeway Café open?
+
+```
+The Ridgeway Café is open from 7:00am to 4:00pm, weekdays only.
+
+Source: `dining_the_ridgeway_cafe.txt`
+```
+
+3. What do students say about the workload for STAT 150 Applied Statistics?
+
+```
+Students say to expect 5 to 6 hours a week outside of class, which is real time rather than optimistic time. They also note that the workload is front-loaded, meaning the first month is heavier than the rest.
+
+Sources: `course_stat_150_workload.txt` and `course_stat_150.txt`
+```
+
+4. When does the campus shuttle run?
+
+```
+The campus shuttle runs a loop every 20 minutes from 7 am to 11 pm on weekdays, and every 40 minutes on weekends.
+
+Source: transit_shuttle.txt
+```
+
+5. What do students say about the format of ENGL 205 Writing for the Sciences?
+
+```
+Students say the format of ENGL 205 Writing for the Sciences is a workshop format where you write every week and peers read it, and it is front-loaded with the first month being heavier partly because you are learning the format.
+
+Sources: `course_engl_205.txt` and `course_engl_205_workload.txt`
+```
 
 ## Verdicts
 
