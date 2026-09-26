@@ -200,7 +200,7 @@ I took the averages for each group and calculated the middle number.
 | 2. Every answer names a source         | 5 of 5 | 4/5   | 2/5   | 2/5   | MISSED  |
 | 3. Gate stops out-of-corpus questions  | 4 of 5 | 5/5   | 5/5   | 5/5   | MET     |
 | 4. Chunk size is >= 50 and <= 600      | 5 of 5 | 5/5   | 5/5   | 5/5   | MET     |
-| 5. Overlap size is 100                 | 5 of 5 | 5/5   | 5/5   | 5/5   | MET     |
+| 5. Overlap size is 100                 | 5 of 5 | N/A   | N/A   | N/A   | N/A     |
 
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
@@ -258,13 +258,14 @@ Sources: `course_engl_205.txt` and `course_engl_205_workload.txt`
 
      Milestone 2. -->
 
-| #   | Criterion | Verdict | How I decided |
-| --- | --------- | ------- | ------------- |
-| 1   |           |         |               |
-| 2   |           |         |               |
-| 3   |           |         |               |
-| 4   |           |         |               |
-| 5   |           |         |               |
+| #   | Criterion                                                  | Verdict | How I decided                                                                                               |
+| --- | ---------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
+| 1   | Retrieved chunk contains the answer                        | MET     | I checked to see if the chunk contained the expects value for each question.                                |
+| 2   | Every answer names a source                                | MISSED  | I checked to see if each output listed at least one source.                                                 |
+| 3   | Gate stops out-of-corpus questions                         | MET     | I checked to see if each out-of-corpus question was refused by seeing if the distance was under the cutoff. |
+| 4   | Chunk size is >= 50 and <= 600                             | MET     | I counted the characters for each output to check that it was in between the boundaries.                    |
+| 5   | Overlap size is 100                                        | N/A     | This couldn't be measured because it requires access to consecutive chunks.                                 |
+| 6   | Chunks preserve the full content of the original documents | MET     | I compared the chunks to the content in the original document to see if the ideas were the same.            |
 
 ## Diagnoses
 
