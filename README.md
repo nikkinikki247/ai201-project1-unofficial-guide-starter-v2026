@@ -197,7 +197,7 @@ I took the averages for each group and calculated the middle number.
 | Criterion                              | Target | Run 1 | Run 2 | Run 3 | Verdict |
 | -------------------------------------- | ------ | ----- | ----- | ----- | ------- |
 | 1. Retrieved chunk contains the answer | 4 of 5 | 5/5   | 5/5   | 5/5   | MET     |
-| 2. Every answer names a source         | 5 of 5 | 4/5   | 2/5   | 2/5   | MISSED  |
+| 2. Every answer names a source         | 5 of 5 | 5/5   | 5/5   | 5/5   | MET     |
 | 3. Gate stops out-of-corpus questions  | 4 of 5 | 5/5   | 5/5   | 5/5   | MET     |
 | 4. Chunk size is >= 50 and <= 600      | 5 of 5 | 5/5   | 5/5   | 5/5   | MET     |
 | 5. Overlap size is 100                 | 5 of 5 | N/A   | N/A   | N/A   | N/A     |
@@ -261,7 +261,7 @@ Sources: `course_engl_205.txt` and `course_engl_205_workload.txt`
 | #   | Criterion                                                  | Verdict | How I decided                                                                                               |
 | --- | ---------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
 | 1   | Retrieved chunk contains the answer                        | MET     | I checked to see if the chunk contained the expects value for each question.                                |
-| 2   | Every answer names a source                                | MISSED  | I checked to see if each output listed at least one source.                                                 |
+| 2   | Every answer names a source                                | MET     | I checked to see if each output listed at least one source.                                                 |
 | 3   | Gate stops out-of-corpus questions                         | MET     | I checked to see if each out-of-corpus question was refused by seeing if the distance was under the cutoff. |
 | 4   | Chunk size is >= 50 and <= 600                             | MET     | I counted the characters for each output to check that it was in between the boundaries.                    |
 | 5   | Overlap size is 100                                        | N/A     | This couldn't be measured because it requires access to consecutive chunks.                                 |
@@ -286,6 +286,8 @@ Sources: `course_engl_205.txt` and `course_engl_205_workload.txt`
      low, and which one you'd tighten and to what.
 
      Milestone 3. -->
+
+     I would tighten the second criterion to include that the sources has to be listed last after the main chunk content rather than in parentheses in the text. Also, I think I would tighten the third criterion (about the chunk size) by reducing the max size because none of my chunks were close to 600 characters.
 
 ## The Improvement
 
