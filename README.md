@@ -292,8 +292,9 @@ Sources: `course_engl_205.txt` and `course_engl_205_workload.txt`
 ## The Improvement
 
 **What I changed:**
-
+I changed my chunking strategy by reducing the chunk size to 400 and overlap to 80.
 **Why I picked it:**
+The previous chunk size was too large.
 
 <!-- Connect it to a specific diagnosis above in one sentence. If you can't,
      you picked a fix because it sounded impressive. -->
@@ -303,13 +304,13 @@ Sources: `course_engl_205.txt` and `course_engl_205_workload.txt`
 <!-- Same format, same five criteria, three runs each.
      `python run_eval.py --label after` -->
 
-| Criterion                              | Target | Run 1 | Run 2 | Run 3 | Verdict |
-| -------------------------------------- | ------ | ----- | ----- | ----- | ------- |
-| 1. Retrieved chunk contains the answer | 4 of 5 |       |       |       |         |
-| 2. Every answer names a source         | 5 of 5 |       |       |       |         |
-| 3. Gate stops out-of-corpus questions  | 4 of 5 |       |       |       |         |
-| 4.                                     |        |       |       |       |         |
-| 5.                                     |        |       |       |       |         |
+| Criterion                                                     | Target | Run 1 | Run 2 | Run 3 | Verdict |
+| ------------------------------------------------------------- | ------ | ----- | ----- | ----- | ------- |
+| 1. Retrieved chunk contains the answer                        | 4 of 5 | 5/5   | 5/5   | 5/5   | MET     |
+| 2. Every answer names a source                                | 5 of 5 | 5/5   | 5/5   | 5/5   | MET     |
+| 3. Gate stops out-of-corpus questions                         | 4 of 5 | 5/5   | 5/5   | 5/5   | MET     |
+| 4. Chunk size is >= 50 and <= 600                             | 5 of 5 | 5/5   | 5/5   | 5/5   | MET     |
+| 5. Chunks preserve the full content of the original documents | 5 of 5 | 5/5   | 5/5   | 5/5   | MET     |
 
 **Did it help?**
 
@@ -319,6 +320,8 @@ Sources: `course_engl_205.txt` and `course_engl_205_workload.txt`
      tell.
 
      Milestone 4. -->
+
+     It didn't change the scores or improve the responses.
 
 ## What's Still Broken
 
