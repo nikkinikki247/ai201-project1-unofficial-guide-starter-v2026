@@ -167,8 +167,10 @@ I took the averages for each group and calculated the middle number.
 
 **1.**
 
-1. I asked Github Copilot to help me come up with two more test questions. It gave me a few example questions I could use. I changed a question that it gave related to chunking size. I changed the value ranges to match the corpora I chose.
-**2.** 2. I used Gemini to understand more about picking chunk sizes and writing the function. I got back information that told me different contexts and what chunk strategies correlated with them.
+1. I asked Github Copilot to help me come up with two more test questions. It gave me a few example questions I could use. I changed a question that it gave related to chunking size. I changed the value ranges to match the corpora I chose. I used Gemini to understand more about picking chunk sizes and writing the function. I got back information that told me different contexts and what chunk strategies correlated with them.
+   **2.**
+   I used AI to diagnose a faulty criterion question and to create a new one to replace the faulty one.
+
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
      claims earns nothing.
@@ -339,3 +341,5 @@ The previous chunk size was too large.
      differently, and why?
 
      Milestone 5. -->
+
+I would pick a more unique chunking strategy to see how things would've changed like splitting on paragraphs even though the current chunking strategy worked.
